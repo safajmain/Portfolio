@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Name and Title</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="head">
+    <div class="box-intro"> 
+    <img src="photome.jpg" alt="Profile Photo">
+    <h1 id="name">Safa Ahmad Al-Jumian</h1>
+    <h3 id="title">Front End Developer</h3>
+    <button id="startBtn">Start</button> </div>
+  </header>
+
+  <!-- Page 1 -->
+  <section id="section2">
+    <h2>About Me</h2>   
+    <p>
+      I am Safaa Ahmad Al-Jumaian, a second-year Software Engineering student at Al-Zaytoonah University, passionate about web development, especially Front-End programming. I am learning HTML, CSS, and JavaScript and working on small projects to enhance my skills. I am committed to continuous learning and enjoy collaborating with others to achieve innovative results.
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </p>
+
+
+
+
+
+
+    <a href="#section3" class="arrow-link">
+      <div class="arrow"> </div>
+    </a>
+  </section>
+
+  <!-- Page 2 (Skills Section) -->
+  <section id="section3" class="sec3">
+    <h2>Skills</h2>
+    <div class="skills">
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git, GitHub</li>
+      </ul>
+    </div>
+     
+    <div class="project">
+safaa
+
+
+    </div>
+    <a href="#section4" class="arrow-link">
+      <div class="arrow"> </div>
+    </a>
+  </section>
+
+  <!-- Page 3 (Projects Section) -->
+  <section id="section4">
+    
+    </ul><div class="experience">
+      <h3>My Web Development Projects</h3>
+      <ul>
+        <li>Front-End Projects (HTML + CSS)</li>
+        <li>JavaScript Projects</li>
+        <li>Responsive Mobile Projects</li>
+      </ul>
+    </div>
+    <a href="#section5" class="arrow-link">
+      <div class="arrow"> </div>
+    </a>
+  </section>
+
+  <!-- Page 4 (Contact Section) -->
+  <section id="section5">
+    <h2>Contact</h2>
+    <p>You can contact me through the following:</p>
+    <ul>
+      <li>Email: safajmain@gmail.com</li>
+      <li>LinkedIn: linkedin.com/in/safaaljumaian</li>
+    </ul>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const section2 = document.getElementById("section2");
+      const section3 = document.getElementById("section3");
+      const section4 = document.getElementById("section4");
+      const section5 = document.getElementById("section5");
+
+      const startBtn = document.getElementById("startBtn");
+
+      // إظهار section2 عند الضغط على زر "Start"
+      startBtn.addEventListener("click", function() {
+        section2.classList.add("show-section2");
+        section2.scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // إظهار section3 عند الضغط على السهم في section2
+      document.querySelector('#section2 .arrow-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        section3.classList.add("show-section3");
+        section3.scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // إظهار section4 عند الضغط على السهم في section3
+      document.querySelector('#section3 .arrow-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        section4.classList.add("show-section4");
+        section4.scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // إظهار section5 عند الضغط على السهم في section4
+      document.querySelector('#section4 .arrow-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        section5.classList.add("show-section5");
+        section5.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
